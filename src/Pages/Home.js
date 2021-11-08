@@ -4,11 +4,28 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TypeWriter from "typewriter-effect";
+import Video from "../../src/img/video.mp4"
 
 function Home() {
   return (
     <HomePageStyled>
+        <video autoPlay
+         loop muted
+            style={{
+                position: "absolute",
+                width: "100%",
+                left:"0%",
+                top:"0%",
+                height: "100%",
+                objectFit: "cover",
+                
+
+            }}
+            >
+                <source src={Video} type="video/mp4" />
+        </video>
       <div className="typography">
+          
         <h1>
           Hi, I'm{" "}
           <span>
