@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Title from '../Components/Title';
-// import blogs from '../data/blogs';
+import Title from '../Components/Title';
+import blogs from '../Data/blogs';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 
 function BlogsPage() {
     return (
         <MainLayout>
             <BlogsStyled>
-            {/* <Title title={'Blogs'} span={'Blogs'} />
+            <Title title={'Active Projects'} span={'Active Projects'} />
                 <InnerLayout className={'blog'}>
                     {
                         blogs.map((blog)=>{
@@ -24,7 +24,7 @@ function BlogsPage() {
                             </div>
                         })
                     }
-                </InnerLayout> */}
+                </InnerLayout>
             </BlogsStyled>
         </MainLayout>
     )

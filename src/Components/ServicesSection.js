@@ -11,17 +11,17 @@ function ServicesSection() {
     return (
         <InnerLayout>
             <ServicesSectionStyled>
-                <Title title={'Services'} span={'services'} />
+                <Title title={'Specialisation'} span={'Specialisation'} />
                 <div className="services">
                     <ServiceCard 
                         image={design} 
-                        title={'Web Development'} 
+                        title={'React Js Development'} 
                         paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                     />
                     <div className="mid-card">
                         <ServiceCard 
                             image={intelligence} 
-                            title={'MERN Stack Development'} 
+                            title={'Node Js Development'} 
                             paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                         />
                     </div>
@@ -30,6 +30,26 @@ function ServicesSection() {
                         title={'Android Development'} 
                         paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                     />
+                </div>
+
+                <div className="services">
+                    <ServiceCard 
+                        image={design} 
+                        title={'Vue Js Development'} 
+                        paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                    />
+                    <div className="mid-card">
+                        <ServiceCard 
+                            image={intelligence} 
+                            title={'Full Stack Development'} 
+                            paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                        />
+                    </div>
+                    {/* <ServiceCard 
+                        image={gamedev} 
+                        title={'Android Development'} 
+                        paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                    /> */}
                 </div>
             </ServicesSectionStyled>
         </InnerLayout>

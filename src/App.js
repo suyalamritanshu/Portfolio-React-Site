@@ -4,7 +4,7 @@ import styled from "styled-components";
 import About from "./Pages/About";
 import ResumePage from "./Pages/ResumePage";
 import Portfolio from "./Pages/Portfolio";
-import Blogs from "./Pages/Blogs";
+import ActiveProjects from "./Pages/ActiveProjects";
 import Contact from "./Pages/Contact";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -33,13 +33,14 @@ const App = () => {
     //   ) : (
 
     <div className="App">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
         style={{
           position: "absolute",
           width: "100%",
+          height: "200%",
           left: "0%",
           top: "0%",
           height: "100%",
@@ -47,30 +48,19 @@ const App = () => {
         }}
       >
         <source src={Video} type="video/mp4" />
-      </video>
+      </video> */}
       <Sidebar />
 
       <MainContentStyled>
-          <div className="lines">
-            <div className="line-1"></div>
-            <div className="line-2"></div>
-            <div className="line-3"></div>
-            <div className="line-4"></div>
-          </div>
-
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/resume' element={<ResumePage />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
-
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/active" element={<ActiveProjects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </MainContentStyled>
-      
-
-        
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
-// import Title from '../Components/Title';
-// import PrimaryButton from '../Components/PrimaryButton';
+import Title from '../Components/Title';
+import PrimaryButton from '../Components/PrimaryButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-// import ContactItem from '../Components/ContactItem';
+import ContactItem from '../Components/ContactItem';
 
 function Contact() {
     const phone = <PhoneIcon />
@@ -14,7 +14,7 @@ function Contact() {
     const location = <LocationOnIcon />
     return (
         <MainLayout>
-            {/* <Title title={'Contact'} span={'Contact'} />
+            <Title title={'Contact Me'} span={'Contact Me'} />
             <ContactPageStyled >
             <InnerLayout className={'contact-section'}>
                 <div className="left-content">
@@ -42,16 +42,16 @@ function Contact() {
                             <PrimaryButton title={'Send Email'} />
                         </div>
                     </form>
-                </div>
-                {/* <div className="right-content">
-                    <ContactItem title={'Phone'} icon={phone} cont1={'+66-789675637'} cont2={'07663520283'} />
-                    <ContactItem title={'Email'} icon={email} cont1={'loremipsum@gmail.com'} cont2={'info.lorem.ipsum@gmail.com'} />
-                    <ContactItem title={'Address'} icon={location} cont1={'27 Aldrich Road, London, England'} cont2={'United Kingdom'} />
+                </div> 
+                <div className="right-content">
+                    <ContactItem title={'Phone'} icon={phone} cont1={'+91 9799097816'}  />
+                    <ContactItem title={'Email'} icon={email} cont1={'amritanshu.suyall2@gmail.com'} cont2={'suyalamritanshu@gmail.com'} />
+                    <ContactItem title={'Address'} icon={location} cont1={'B2/3 Officer Colony Kumbhi Chini Mill, Kumbhi Distt: Lakhimpur-Kheri'} cont2={'India'} />
                     
-                </div> */}
+                </div>
+          </InnerLayout>
+           </ContactPageStyled> 
           </MainLayout> 
-          // </InnerLayout>
-          //  </ContactPageStyled> */}
         
     )
 }
