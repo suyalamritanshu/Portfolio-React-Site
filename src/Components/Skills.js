@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar";
 function Skills() {
   return (
     <SkillsStyled>
-      <Title title={"Resume"} span={"Resume"} />
+      <Title title={"My Skills"} span={"my skills"} />
       <InnerLayout>
         <div className="skills">
           <ProgressBar title={"React Js"} width={"85%"} text={"85%"} />
