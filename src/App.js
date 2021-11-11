@@ -3,15 +3,13 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import styled from "styled-components";
 import About from "./Pages/About";
 import ResumePage from "./Pages/ResumePage";
-import Portfolio from "./Pages/Portfolio";
+import Projects from "./Pages/Projects";
 import ActiveProjects from "./Pages/ActiveProjects";
 import Contact from "./Pages/Contact";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import MenuIcon from "@material-ui/icons/Menu";
-
-// import Switch from "@material-ui/core/Switch";
-// import { IconButton } from "@material-ui/core";
-
+import Switch from "@material-ui/core/Switch";
+import { IconButton } from "@material-ui/core";
 import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
 import Video from "../src/img/video1.mp4";
@@ -26,6 +24,22 @@ const App = () => {
   //     setLoading(false);
   //   }, 1000);
   // }, []);
+  const [theme, setTheme] = useState("dark-theme");
+  const [checked, setChecked] = useState(false);
+  const [navToggle, setNavToggle] = useState(false);
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+      setChecked(false);
+    } else {
+      setTheme("light-theme");
+      setChecked(true);
+    }
+  };
   return (
     // <div className="App1">
     //   {loading ? (
@@ -49,13 +63,36 @@ const App = () => {
       >
         <source src={Video} type="video/mp4" />
       </video> */}
-      <Sidebar />
+      <Sidebar navToggle={navToggle} />
+
+      <div className="theme">
+        <div className="light-dark-mode">
+          <div className="left-content">
+            <Brightness4Icon />
+          </div>
+          <div className="right-content">
+            <Switch
+              value=""
+              checked={checked}
+              inputProps={{ "aria-label": "" }}
+              size="medium"
+              onClick={themeToggler}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="ham-burger-menu">
+        <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <MenuIcon />
+        </IconButton>
+      </div>
 
       <MainContentStyled>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/active" element={<ActiveProjects />} />
           <Route path="/contact" element={<Contact />} />
