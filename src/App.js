@@ -83,10 +83,11 @@ const App = () => {
       </div>
 
       <div className="ham-burger-menu">
-        <IconButton onClick={() => setNavToggle(!navToggle)}>
-          <MenuIcon />
-        </IconButton>
-      </div>
+          <IconButton onClick={() => setNavToggle(!navToggle)}>
+              <MenuIcon />
+          </IconButton>
+        </div>
+
 
       <MainContentStyled>
         <Routes>
