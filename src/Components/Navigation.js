@@ -27,24 +27,19 @@ function Navigation() {
         </li>
         <li className="nav-item">
           <NavLink to="/projects" activeClassName="active-class" exact>
-            Projects
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink to="/active" activeClassName="active-class" exact>
-            Active Projects
+           My Projects
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/contact" activeClassName="active-class" exact>
-            Contact
+            Contact Me
           </NavLink>
         </li>
       </ul>
       <footer className="footer">
         <p>
           {" "}
-          @2021 <b> Amritanshu Suyal</b>
+          Copyright @2021 <b> Amritanshu Suyal</b>
         </p>
       </footer>
     </NavigationStyled>

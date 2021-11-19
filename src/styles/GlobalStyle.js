@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
     --background-light-color-2: rgba(3,127,255,.3);
     --white-color: #151515;
     --font-light-color: #313131;
+    --font-light-color2: #fff;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #E4E4E4;

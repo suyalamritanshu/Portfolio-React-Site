@@ -16,13 +16,13 @@ function ServicesSection() {
                     <ServiceCard 
                         image={design} 
                         title={'React Js Development'} 
-                        paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                        paragraph={'React js is a framework of js and used for making frontend of the webapps.'}
                     />
                     <div className="mid-card">
                         <ServiceCard 
                             image={intelligence} 
                             title={'Node Js Development'} 
-                            paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                            paragraph={'Node js is a framework of js and used for making backend of any type of apps.'}
                         />
                     </div>
                     <ServiceCard 

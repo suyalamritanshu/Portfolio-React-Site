@@ -64,10 +64,10 @@ function Resume() {
           />
           <ResumeItem
             year={"2015 - 2017"}
-            title={"High School Graduation"}
-            subTitle={"ABC School"}
+            title={"High School"}
+            subTitle={"St John's Senior Secondary School"}
             text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
+              "My percentage was 85% and i had won many of the competitions and olympiads"
             }
           />
         </div>

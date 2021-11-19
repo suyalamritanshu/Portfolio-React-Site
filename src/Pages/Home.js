@@ -4,28 +4,29 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import GithubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TypeWriter from "typewriter-effect";
-import Video from "../../src/img/video1.mp4"
+import Video from "../../src/img/video1.mp4";
 
 function Home() {
   return (
     <HomePageStyled>
-        <video autoPlay
-         loop muted
-            style={{
-                position: "absolute",
-                width: "100%",
-                left:"0%",
-                top:"0%",
-                height: "100%",
-                objectFit: "cover",
-                
-
-            }}
-            >
-                <source src={Video} type="video/mp4" />
-        </video>
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: "absolute",
+          width: "100%",
+          left: "0%",
+          top: "0%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      >
+        <source src={Video} type="video/mp4" />
+      </video>
       <div className="typography">
-          
+
+        <h1>Let's Start</h1>
         <h1>
           Hi, I'm{" "}
           <span>
@@ -48,11 +49,11 @@ function Home() {
             />
           </span>
         </h1>
-        <p>
+        {/* <p>
           I design and develop various apps and websites for target users, also
           know some stuff about backend and made pretty good web apps with
           frontend as well as backend.
-        </p>
+        </p> */}
         <div className="icons">
           <a
             href="https://www.instagram.com/amritanshusuyal04/"
@@ -98,7 +99,7 @@ const HomePageStyled = styled.header`
       justify-content: center;
       margin-top: 1rem;
       .icon {
-        border: 2px solid var(--border-color);
+        border: 2px solid white;
         display: flex;
         align-items: center;
         justify-content: center;

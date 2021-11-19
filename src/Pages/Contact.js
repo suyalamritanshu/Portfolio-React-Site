@@ -8,6 +8,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ContactItem from "../Components/ContactItem";
 
+
 function Contact() {
   const phone = <PhoneIcon />;
   const email = <EmailIcon />;
@@ -71,6 +72,7 @@ function Contact() {
           </div>
         </InnerLayout>
       </ContactPageStyled>
+      
     </MainLayout>
   );
 }

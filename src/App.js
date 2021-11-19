@@ -4,7 +4,7 @@ import styled from "styled-components";
 import About from "./Pages/About";
 import ResumePage from "./Pages/ResumePage";
 import Projects from "./Pages/Projects";
-import ActiveProjects from "./Pages/ActiveProjects";
+
 import Contact from "./Pages/Contact";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -12,7 +12,6 @@ import Switch from "@material-ui/core/Switch";
 import { IconButton } from "@material-ui/core";
 import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
-import Video from "../src/img/video1.mp4";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -95,7 +94,6 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<ResumePage />} />
-          <Route path="/active" element={<ActiveProjects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </MainContentStyled>

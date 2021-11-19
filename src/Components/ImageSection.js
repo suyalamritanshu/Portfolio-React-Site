@@ -12,7 +12,11 @@ function ImageSection() {
             <div className="right-content">
                 <h4>I am <span>Amritanshu</span></h4>
                 <p className="paragraph">
-                I am currently a full stack developer pursuing my B.Tech from Jaypee University of Technology Solan
+                I am currently a 2nd year student pursuing my B.Tech from Jaypee University of Technology, Solan. 
+                
+                I like reading tech articles particularly related to new technology coming to the market and playing badminton.
+
+                Coming to my tech world, i have explored a lot on web (frontend + backend) and android development and made some cool projects..
 
 
                     
@@ -24,7 +28,6 @@ function ImageSection() {
                         <p>Nationality </p>
                         <p>Languages </p>
                         <p>Location</p>
-                        <p>Service</p>
                     </div>
                     <div className="info">
                         <p>: Amritanshu Suyal</p>
@@ -32,10 +35,10 @@ function ImageSection() {
                         <p>: Indian</p>
                         <p>: English, Hindi </p>
                         <p>: Lucknow, Uttar Pradesh</p>
-                        <p>: Freelance</p>
                     </div>
                 </div>
-                <PrimaryButton title={'Download Resume'} />
+                <a href="https://drive.google.com/file/d/13G_6Jb-rjWrG7LZw00KUDvw9C8-Tg8QI/view?usp=sharing" target="_blank">  <PrimaryButton title={'Download Resume'} /> </a>
+               
             </div>
         </ImageSectionStyled>
     )
