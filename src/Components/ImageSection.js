@@ -25,19 +25,17 @@ function ImageSection() {
                     <div className="info-title">
                         <p>Full Name</p>
                         <p>Age</p>
-                        <p>Nationality </p>
                         <p>Languages </p>
                         <p>Location</p>
                     </div>
                     <div className="info">
                         <p>: Amritanshu Suyal</p>
                         <p>: 19</p>
-                        <p>: Indian</p>
                         <p>: English, Hindi </p>
                         <p>: Lucknow, Uttar Pradesh</p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/13G_6Jb-rjWrG7LZw00KUDvw9C8-Tg8QI/view?usp=sharing" target="_blank">  <PrimaryButton title={'Download Resume'} /> </a>
+                <a href="https://drive.google.com/file/d/1Ob_vqTrUhPtb8RmX15syZEn4dYtxfXa2/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
                
             </div>
         </ImageSectionStyled>

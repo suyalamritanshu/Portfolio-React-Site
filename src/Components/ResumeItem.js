@@ -60,6 +60,7 @@ const ResumeItemStyled = styled.div`
         h5{
             color: var(--primary-color);
             font-size: 2rem;
+            margin-top: -0.7rem;
             padding-bottom: .4rem;
         }
         h6{

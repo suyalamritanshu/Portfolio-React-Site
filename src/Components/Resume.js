@@ -18,27 +18,19 @@ function Resume() {
         </div>
         <div className="resume-content">
           <ResumeItem
-            year={"2015 - 2020"}
-            title={"Computer Science Teacher"}
-            subTitle={"Sussex University"}
+            year={"12-21 - Present"}
+            title={"React Js Developer"}
+            subTitle={"Shell Code Solutions"}
             text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
+              "Currently doing my internship at shell code solutions as a react js developer where i have completed 1 project which was given me by my mentor at the internship and working on  the other. Both the projects are based on react(frontend)."
             }
           />
           <ResumeItem
-            year={"2015 - Present"}
-            title={"Full Stack Developer"}
-            subTitle={"Microsoft Studios"}
+            year={"11-21 - 12-21"}
+            title={"Android Developer"}
+            subTitle={"TwoWaits"}
             text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
-            }
-          />
-          <ResumeItem
-            year={"2010 - 2017"}
-            title={"User Interface Designer"}
-            subTitle={"Google Inc"}
-            text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
+              "Completed my internship at twowaits as an android developer where i have learned kotlin with 2 projects, qr code scanner and jokes app both are in my projects section. All tasks given are completed in due time during the internship."
             }
           />
         </div>
@@ -47,27 +39,28 @@ function Resume() {
         </div>
         <div className="resume-content ">
           <ResumeItem
-            year={"201 - 2022"}
-            title={"Computer Science Degree"}
-            subTitle={"Sussex University"}
+            year={"2020 - Present"}
+            title={"B-Tech CSE"}
+            subTitle={"Jaypee University of Information Technology"}
             text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
+              "Currently pursuing my btech in cse, won 2 hackathons which was based on innovating something new where i was the team lead. Worked on 3 live projects one was based on android and the other two are websites which was on bootstrap and react js respectively."
+            }
+          />
+
+          <ResumeItem
+            year={"2018 - 2020"}
+            title={"Class 12"}
+            subTitle={"LBS Convent School"}
+            text={
+              "Pursued my class 12 from lbs convent school, kota with percentage of 85%, participated in many inter school and intra school competitions as a team lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
             }
           />
           <ResumeItem
-            year={"2015 - 2017"}
-            title={"A - Levels"}
-            subTitle={"Church Hill High"}
+            year={"2017 - 2018"}
+            title={"Class 10"}
+            subTitle={"St John's Sr. Sec. School"}
             text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa nihil impedit natus nostrum? Velit accusantium id quos, nihil vel quod.Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. "
-            }
-          />
-          <ResumeItem
-            year={"2015 - 2017"}
-            title={"High School"}
-            subTitle={"St John's Senior Secondary School"}
-            text={
-              "My percentage was 85% and i had won many of the competitions and olympiads"
+              "Pursued my class 10 from St John's Sr. Sec. School, lakhimpur with percentage of 85%, participated in many olympiads and won some of them with a good rank. All the tasks that are assigned to me are done with full responsiblity and punctuality in the due time."
             }
           />
         </div>

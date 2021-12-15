@@ -49,11 +49,7 @@ function Home() {
             />
           </span>
         </h1>
-        {/* <p>
-          I design and develop various apps and websites for target users, also
-          know some stuff about backend and made pretty good web apps with
-          frontend as well as backend.
-        </p> */}
+        
         <div className="icons">
           <a
             href="https://www.instagram.com/amritanshusuyal04/"
