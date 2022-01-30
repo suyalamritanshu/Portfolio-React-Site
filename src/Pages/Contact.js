@@ -87,7 +87,7 @@ function Contact() {
                 <label htmlFor="message">Enter your Message*</label>
                 <TextareaField value={values.message} handleChange={handleChange}  name="message" />
               </div>
-              <div className="form-field f-button">
+              <div className="form-field">
                 <button type="submit">Send Email</button>
               </div>
              
@@ -179,6 +179,26 @@ const ContactPageStyled = styled.section`
           color: inherit;
           width: 100%;
           padding: 0.8rem 1rem;
+        }
+        button{
+          outline: none;
+    border: none;
+    background-color: var(--background-light-color-2);
+    padding: .4rem 2rem;
+    font-size: inherit;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    margin-bottom: .6rem;
+    &:active ,&:focus{
+        background-color: var(--primary-color);
+    }
+    &:hover{
+        background-color: var(--primary-color);
+    }
+    &:not(:last-child){
+        margin-right: .6rem;
+    }
         }
       }
     }
