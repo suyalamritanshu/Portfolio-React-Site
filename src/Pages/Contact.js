@@ -43,7 +43,7 @@ function Contact() {
     if (status === 'SUCCESS') {
       setTimeout(() => {
         setStatus('');
-      }, 3000);
+      }, 100000);
     }
   }, [status]);
 
