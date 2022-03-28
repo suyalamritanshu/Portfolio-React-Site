@@ -35,7 +35,7 @@ function ImageSection() {
                         <p>: Lucknow, Uttar Pradesh</p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/1Ob_vqTrUhPtb8RmX15syZEn4dYtxfXa2/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
+                <a href="https://drive.google.com/file/d/1mfwH_s2Je7_jMj-4l5JS2AplhkTaTla-/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
                
             </div>
         </ImageSectionStyled>
