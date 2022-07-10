@@ -17,12 +17,20 @@ function Resume() {
           <SmallTitle icon={briefcase} title={"Working Experience"} />
         </div>
         <div className="resume-content">
+        <ResumeItem
+            year={"01-22 - Present"}
+            title={"Next Js Developer"}
+            subTitle={"BigOHealth"}
+            text={
+              "In this internship i have changed the whole site from react js to next js, i have implemented some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85."
+            }
+          />
           <ResumeItem
-            year={"12-21 - Present"}
+            year={"11-21 - 01-22"}
             title={"React Js Developer"}
             subTitle={"Shell Code Solutions"}
             text={
-              "Currently doing my internship at shell code solutions as a react js developer where i have completed 1 project which was given me by my mentor at the internship and working on  the other. Both the projects are based on react(frontend)."
+              "Completed my internship at shell code solutions as a react js developer where i have completed 1 project which was given me by my mentor at the internship and working on  the other. Both the projects are based on react(frontend)."
             }
           />
           <ResumeItem
