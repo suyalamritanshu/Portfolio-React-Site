@@ -43,6 +43,9 @@ function Home() {
                   .typeString("Mern Stack Developer💻")
                   .pauseFor(1000)
                   .deleteAll()
+                  .typeString("Next Js Developer💻")
+                  .pauseFor(1000)
+                  .deleteAll()
                   .typeString("Amritanshu Suyal📙")
                   .start();
               }}

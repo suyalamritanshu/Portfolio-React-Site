@@ -39,7 +39,7 @@ function Navigation() {
       <footer className="footer">
         <p>
           {" "}
-          Copyright @2021 <b> Amritanshu Suyal</b>
+          Copyright @2023 <b> Amritanshu Suyal</b>
         </p>
       </footer>
     </NavigationStyled>
@@ -51,7 +51,7 @@ const NavigationStyled = styled.nav`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 60%;
   width: 100%;
   border-right: 1px solid var(--border-color);
   .avatar {
