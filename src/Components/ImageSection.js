@@ -12,7 +12,7 @@ function ImageSection() {
             <div className="right-content">
                 <h4>I am <span>Amritanshu</span></h4>
                 <p className="paragraph">
-                I am currently a 2nd year student pursuing my B.Tech from Jaypee University of Technology, Solan. 
+                I am currently a 4th year student pursuing my B.Tech from Jaypee University of Technology, Solan. 
                 
                 I like reading tech articles particularly related to new technology coming to the market and playing badminton.
 
@@ -30,12 +30,12 @@ function ImageSection() {
                     </div>
                     <div className="info">
                         <p>: Amritanshu Suyal</p>
-                        <p>: 19</p>
+                        <p>: 21</p>
                         <p>: English, Hindi </p>
                         <p>: Lucknow, Uttar Pradesh</p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/1mfwH_s2Je7_jMj-4l5JS2AplhkTaTla-/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
+                <a href="https://drive.google.com/file/d/1SHeh6xDl2uDxFP21mPsa58reV5xnPmeb/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
                
             </div>
         </ImageSectionStyled>

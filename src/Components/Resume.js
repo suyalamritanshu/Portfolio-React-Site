@@ -17,30 +17,34 @@ function Resume() {
           <SmallTitle icon={briefcase} title={"Working Experience"} />
         </div>
         <div className="resume-content">
-        <ResumeItem
+          <ResumeItem
             year={"01-22 - Present"}
             title={"Next Js Developer"}
             subTitle={"BigOHealth"}
             text={
-              "In this internship i have changed the whole site from react js to next js, i have implemented some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85."
+              "I have implemented some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85. The website is live handling a traffic of around 10000/month."
             }
           />
+
           <ResumeItem
-            year={"12-21 - 01-22"}
+            year={"01-23 - Present"}
+            title={"Full Stack Developer"}
+            subTitle={"Fanstox"}
+            text={
+              "Developed an app that conducts contests related to stock markets and successfully integrated Razorpay payment gateway and managed in-app wallet. Also made the Built the entire backend and APIs for contests, login and OTP verification."
+            }
+          />
+
+
+          <ResumeItem
+            year={"11-21 - 01-22"}
             title={"React Js Developer"}
             subTitle={"Shell Code Solutions"}
             text={
               "Completed my internship at shell code solutions as a react js developer where i have completed 1 project which was given me by my mentor at the internship and working on  the other. Both the projects are based on react(frontend)."
             }
           />
-          <ResumeItem
-            year={"11-21 - 12-21"}
-            title={"Android Developer"}
-            subTitle={"TwoWaits"}
-            text={
-              "Completed my internship at twowaits as an android developer where i have learned kotlin with 2 projects, qr code scanner and jokes app both are in my projects section. All tasks given are completed in due time during the internship."
-            }
-          />
+
         </div>
         <div className="small-title u-small-title-margin">
           <SmallTitle icon={school} title={"Educational Qualifications"} />
@@ -60,17 +64,10 @@ function Resume() {
             title={"Class 12"}
             subTitle={"LBS Convent School"}
             text={
-              "Pursued my class 12 from lbs convent school, kota with percentage of 85%, participated in many inter school and intra school competitions as a team lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
+              "Pursued my class 12 from lbs convent school, kota with percentage of 85%, participated in many inter school and intra school competitions as a tea lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
             }
           />
-          <ResumeItem
-            year={"2017 - 2018"}
-            title={"Class 10"}
-            subTitle={"St John's Sr. Sec. School"}
-            text={
-              "Pursued my class 10 from St John's Sr. Sec. School, lakhimpur with percentage of 85%, participated in many olympiads and won some of them with a good rank. All the tasks that are assigned to me are done with full responsiblity and punctuality in the due time."
-            }
-          />
+
         </div>
       </InnerLayout>
     </ResumeStyled>
