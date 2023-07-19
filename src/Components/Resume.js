@@ -37,7 +37,7 @@ function Resume() {
 
 
           <ResumeItem
-            year={"11-21 - 01-22"}
+            year={"11-21 - 12-22"}
             title={"React Js Developer"}
             subTitle={"Shell Code Solutions"}
             text={
