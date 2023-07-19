@@ -22,7 +22,7 @@ function Resume() {
             title={"Next Js Developer"}
             subTitle={"BigOHealth"}
             text={
-              "I have implemented some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85. The website is live handling a traffic of around 10000/month."
+              "I have resolved some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85. The website is live handling a traffic of around 10000/month."
             }
           />
 
@@ -64,7 +64,7 @@ function Resume() {
             title={"Class 12"}
             subTitle={"LBS Convent School"}
             text={
-              "Pursued my class 12 from lbs convent school, kota with percentage of 85%, participated in many inter school and intra school competitions as a tea lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
+              "Pursued my class 12 from lbs convent school, kota with percentage of 78%, participated in many inter school and intra school competitions as a team lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
             }
           />
 
