@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -19,6 +19,16 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    
+    /* Typography Scale */
+    --font-size-h1: 4rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 2rem;
+    --font-size-h4: 1.6rem;
+    --font-size-h5: 1.4rem;
+    --font-size-h6: 1.2rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
 }
 .light-theme{
     --primary-color: #007bff;
@@ -91,13 +101,13 @@ a{
     font-family: inherit;
     color: inherit;
     font-size: inherit;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
 }
 h1{
-    font-size: 4rem;
+    font-size: var(--font-size-h1);
     color: var(--white-color);
     span{
-        font-size: 4rem;
+        font-size: var(--font-size-h1);
         @media screen and (max-width: 502px){
             font-size: 3rem
         }
@@ -106,13 +116,33 @@ h1{
         font-size: 3rem
     }
 }
-span{
-    color: var(--primary-color);
+h2{
+    font-size: var(--font-size-h2);
+    color: var(--white-color);
+}
+h3{
+    font-size: var(--font-size-h3);
+    color: var(--white-color);
+}
+h4{
+    font-size: var(--font-size-h4);
+    color: var(--white-color);
+}
+h5{
+    font-size: var(--font-size-h5);
+    color: var(--white-color);
 }
 h6{
     color: var(--white-color);
-    font-size: 1.2rem;
+    font-size: var(--font-size-h6);
     padding-bottom: .6rem;
+}
+p{
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+}
+span{
+    color: inherit;
 }
 //Utilities
 .u-margin-bottom{

@@ -18,30 +18,27 @@ function Resume() {
         </div>
         <div className="resume-content">
           <ResumeItem
-            year={"01-22 - Present"}
+            year={"Jun '24 - Present"}
+            title={"Software Engineer"}
+            subTitle={"Darwinbox"}
+            text={
+              "Optimized Angular component architecture, change detection, and lazy loading, improving UI performance by 29% and reducing production bugs by 42%. Built and scaled Angular-based user interfaces for Darwinbox Super Agent, supporting 30 lakh+ users with optimized rendering and state management, resulting in a 31% increase in user engagement. Redesigned frontend UI architecture using modular, reusable components and design patterns, driving a 40% adoption increase and $100K first-month revenue. Built shared Web Components using Stencil to unify the design system across the platform, reducing UI inconsistencies and cutting duplicate implementation effort by 40%."
+            }
+          />
+          <ResumeItem
+            year={"Jan '24 - May '24"}
+            title={"SDE Intern"}
+            subTitle={"Darwinbox"}
+            text={
+              "Worked across modern frontend stacks including Angular, React, and Next.js, focusing on UI development, reusable components, and frontend best practices. Developed a training project with emphasis on frontend UI, responsive design, API integration, and performance optimization. Built an in-house user interaction tracking solution, reducing costs by 80% by removing dependency on third-party tools."
+            }
+          />
+          <ResumeItem
+            year={"Jan '22 - Jul '23"}
             title={"Next Js Developer"}
             subTitle={"BigOHealth"}
             text={
-              "I have resolved some of the issues to gain seo and performance like alt tags in images and next js itself is a seo gainer resulting in increased performance from 18 to 85. The website is live handling a traffic of around 10000/month."
-            }
-          />
-
-          <ResumeItem
-            year={"01-23 - Present"}
-            title={"Full Stack Developer"}
-            subTitle={"Fanstox"}
-            text={
-              "Developed an app that conducts contests related to stock markets and successfully integrated Razorpay payment gateway and managed in-app wallet. Also made the Built the entire backend and APIs for contests, login and OTP verification."
-            }
-          />
-
-
-          <ResumeItem
-            year={"11-21 - 12-22"}
-            title={"React Js Developer"}
-            subTitle={"Shell Code Solutions"}
-            text={
-              "Completed my internship at shell code solutions as a react js developer where i have completed 1 project which was given me by my mentor at the internship and working on  the other. Both the projects are based on react(frontend)."
+              <>Implemented SEO best practices including semantic HTML, metadata optimization, and performance tuning. Improved Google Lighthouse scores with 85+ Performance and 97+ SEO ratings. Production website handles approximately 100,000 monthly visitors. <a href="https://www.bigohealth.com/" target="_blank" rel="noreferrer">Visit Website</a></>
             }
           />
 
@@ -51,7 +48,7 @@ function Resume() {
         </div>
         <div className="resume-content ">
           <ResumeItem
-            year={"2020 - Present"}
+            year={"2020 - 2024"}
             title={"B-Tech CSE"}
             subTitle={"Jaypee University of Information Technology"}
             text={
@@ -64,7 +61,7 @@ function Resume() {
             title={"Class 12"}
             subTitle={"LBS Convent School"}
             text={
-              "Pursued my class 12 from lbs convent school, kota with percentage of 78%, participated in many inter school and intra school competitions as a team lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
+              "Pursued my class 12 from lbs convent school, kota, participated in many inter school and intra school competitions as a team lead and won some of them. Many tasks were given to me during the school and i have completed them in due time."
             }
           />
 

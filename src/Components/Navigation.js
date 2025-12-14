@@ -27,7 +27,7 @@ function Navigation() {
         </li>
         <li className="nav-item">
           <NavLink to="/projects" activeClassName="active-class" exact>
-           My Projects
+            My Projects
           </NavLink>
         </li>
         <li className="nav-item">
@@ -39,7 +39,7 @@ function Navigation() {
       <footer className="footer">
         <p>
           {" "}
-          Copyright @2023 <b> Amritanshu Suyal</b>
+          Copyright @{new Date().getFullYear()} <b> Amritanshu Suyal</b>
         </p>
       </footer>
     </NavigationStyled>

@@ -33,26 +33,31 @@ function Home() {
             <TypeWriter
               onInit={(typeWriter) => {
                 typeWriter
-                  .typeString("Full Stack Developer💻")
-
+                  .typeString("Amritanshu Suyal ✨")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Android Developer📱")
+                  .typeString("Software Developer ✅")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Mern Stack Developer💻")
+                  .typeString("Next.js Developer ⚛️")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Next Js Developer💻")
+                  .typeString("Angular Developer 🅰️")
                   .pauseFor(1000)
                   .deleteAll()
-                  .typeString("Amritanshu Suyal📙")
+                  .typeString("Android Developer 📲")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("MERN Stack Developer 🌐")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("Full Stack Developer 💻")
                   .start();
               }}
             />
           </span>
         </h1>
-        
+
         <div className="icons">
           <a
             href="https://www.instagram.com/amritanshusuyal04/"

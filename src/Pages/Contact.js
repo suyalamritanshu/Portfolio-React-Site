@@ -66,7 +66,7 @@ function Contact() {
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
           <div className="left-content">
-          {status && renderAlert()}
+            {status && renderAlert()}
             <div className="contact-title">
               <h4>Get In Touch</h4>
             </div>
@@ -85,12 +85,12 @@ function Contact() {
               </div>
               <div className="form-field">
                 <label htmlFor="message">Enter your Message*</label>
-                <TextareaField value={values.message} handleChange={handleChange}  name="message" />
+                <TextareaField value={values.message} handleChange={handleChange} name="message" />
               </div>
               <div className="form-field">
                 <button type="submit">Send Email</button>
               </div>
-             
+
             </form>
           </div>
           <div className="right-content">
@@ -109,7 +109,7 @@ function Contact() {
               title={"Address"}
               icon={location}
               cont1={
-                "B2/3 Officer Colony Kumbhi Chini Mill, Kumbhi Distt: Lakhimpur-Kheri"
+                "Ayyappa Society, Madhapur, Hyderabad, Telangana"
               }
               cont2={"India"}
             />

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ResumeItem({year, title, subTitle, text}) {
+function ResumeItem({ year, title, subTitle, text }) {
     return (
         <ResumeItemStyled>
             <div className="left-content">
@@ -27,7 +27,8 @@ const ResumeItemStyled = styled.div`
         padding-bottom: 3rem;
     }
     .left-content{
-        width: 50%;
+        min-width: 200px;
+        flex-shrink: 0;
         padding-left: 20px;
         position: relative;
         &::before{
@@ -43,6 +44,7 @@ const ResumeItemStyled = styled.div`
         }
         p{
             display: inline-block;
+            white-space: nowrap;
         }
     }
     .right-content{
@@ -59,13 +61,28 @@ const ResumeItemStyled = styled.div`
         }
         h5{
             color: var(--primary-color);
-            font-size: 2rem;
+            font-size: var(--font-size-h5);
             margin-top: -0.7rem;
             padding-bottom: .4rem;
         }
         h6{
             padding-bottom: .6rem;
-            font-size: 1.5rem;
+            font-size: var(--font-size-h6);
+        }
+        p{
+            font-size: var(--font-size-body);
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-top: 0.5rem;
+            a{
+                color: var(--primary-color);
+                text-decoration: underline;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: var(--primary-color-light);
+                }
+            }
         }
     }
 `;

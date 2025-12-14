@@ -7,19 +7,14 @@ function ImageSection() {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={resume} alt=""/>
+                <img src={resume} alt="" />
             </div>
             <div className="right-content">
                 <h4>I am <span>Amritanshu</span></h4>
                 <p className="paragraph">
-                I am currently a 4th year student pursuing my B.Tech from Jaypee University of Technology, Solan. 
-                
-                I like reading tech articles particularly related to new technology coming to the market and playing badminton.
-
-                Coming to my tech world, i have explored a lot on web (frontend + backend) and android development and made some cool projects..
-
-
-                    
+                    Frontend Engineer specializing in Angular, React, and Next.js. Currently at Darwinbox, building enterprise products for 30+ lakh users with a focus on performance, scalability, and design systems.
+                    <br /><br />
+                    Passionate about creating high-quality user experiences and solving complex UI challenges.
                 </p>
                 <div className="about-info">
                     <div className="info-title">
@@ -30,13 +25,13 @@ function ImageSection() {
                     </div>
                     <div className="info">
                         <p>: Amritanshu Suyal</p>
-                        <p>: 21</p>
+                        <p>: 23</p>
                         <p>: English, Hindi </p>
-                        <p>: Lucknow, Uttar Pradesh</p>
+                        <p>: Hyderabad, Telangana   </p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/1SHeh6xDl2uDxFP21mPsa58reV5xnPmeb/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
-               
+                <a href="https://drive.google.com/file/d/1CA1LWdEvKtaFscXnZELJhBtAHpHuNxD_/view?usp=drive_link" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
+
             </div>
         </ImageSectionStyled>
     )
@@ -67,10 +62,10 @@ const ImageSectionStyled = styled.div`
     .right-content{
         width: 100%;
         h4{
-            font-size: 2rem;
+            font-size: var(--font-size-h3);
             color: var(--white-color);
             span{
-                font-size: 2rem;
+                font-size: var(--font-size-h3);
             }
         }
         .paragraph{
