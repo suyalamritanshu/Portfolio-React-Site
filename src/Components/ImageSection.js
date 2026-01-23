@@ -30,7 +30,7 @@ function ImageSection() {
                         <p>: Hyderabad, Telangana   </p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/1CA1LWdEvKtaFscXnZELJhBtAHpHuNxD_/view?usp=drive_link" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
+                <a href="https://drive.google.com/file/d/1WqW53JP_BcDfudrZB4_0ZtTynB8K0-ie/view?usp=sharing" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
 
             </div>
         </ImageSectionStyled>
