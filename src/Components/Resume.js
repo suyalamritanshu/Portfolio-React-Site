@@ -22,7 +22,7 @@ function Resume() {
             title={"Software Engineer"}
             subTitle={"Darwinbox"}
             text={
-              "Optimized Angular component architecture, change detection, and lazy loading, improving UI performance by 29% and reducing production bugs by 42%. Built and scaled Angular-based user interfaces for Darwinbox Super Agent, supporting 30 lakh+ users with optimized rendering and state management, resulting in a 31% increase in user engagement. Redesigned frontend UI architecture using modular, reusable components and design patterns, driving a 40% adoption increase and $100K first-month revenue. Built shared Web Components using Stencil to unify the design system across the platform, reducing UI inconsistencies and cutting duplicate implementation effort by 40%."
+              "Built and scaled Angular-based user interfaces for Darwinbox Super Agent, supporting 30 lakh+ users with optimized rendering and state management, resulting in a 31% increase in user engagement. Built a dynamic, configurable data-collection framework integrated with Darwinbox HRMS, enabling employee data binding, conditional display logic, field dependencies, and calculated fields, reducing internal engineering effort by 35% across 20+ modules. Developed a centralized design system component library using Stencil, standardizing UI across products and teams, driving 70%+ internal adoption and cutting duplicate frontend implementation effort by 40%.Optimized Angular component architecture, change detection, and lazy loading, improving UI performance by 29% and reducing production bugs by 42%."
             }
           />
           <ResumeItem
