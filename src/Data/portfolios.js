@@ -1,10 +1,15 @@
 import deskdoc from "../img/portImages/deskdoc.png";
+import deskdocWebp from "../img/portImages/deskdoc.webp";
 import finovaai from "../img/portImages/finovaai.png";
+import finovaaiWebp from "../img/portImages/finovaai.webp";
 
 export const featuredProjects = [
   {
     id: "deskdoc",
     image: deskdoc,
+    imageWebp: deskdocWebp,
+    imageWidth: 700,
+    imageHeight: 438,
     link: "https://deskdoc.in",
     title: "DeskDoc",
     text: "AI voice receptionist for clinics — cuts average call handling time by 40%.",
@@ -13,6 +18,9 @@ export const featuredProjects = [
   {
     id: "finovaai",
     image: finovaai,
+    imageWebp: finovaaiWebp,
+    imageWidth: 700,
+    imageHeight: 438,
     link: "https://finova-ai-official.vercel.app",
     title: "FinovaAI",
     text: "Personal finance app.",

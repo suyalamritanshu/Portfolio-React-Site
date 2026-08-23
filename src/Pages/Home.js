@@ -33,8 +33,9 @@ function Home() {
           </p>
           <div className="actions">
             <a
-              href="/Amritanshu_Suyal_Resume.pdf"
-              download
+              href="https://drive.google.com/uc?export=download&id=1MJ50aA6VYjfRoU6xcYnS3a_wZZefAohU"
+              target="_blank"
+              rel="noreferrer"
               className="resume-link"
             >
               Download Resume
@@ -81,6 +82,9 @@ function Home() {
               <FeaturedProjectCard
                 key={project.id}
                 image={project.image}
+                imageWebp={project.imageWebp}
+                imageWidth={project.imageWidth}
+                imageHeight={project.imageHeight}
                 title={project.title}
                 text={project.text}
                 link={project.link}

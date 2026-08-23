@@ -11,7 +11,7 @@ function ContactItem({title, icon, cont1, cont2}) {
                 }
             </div>
             <div className="right-content">
-                <h6>{title}</h6>
+                <h4>{title}</h4>
                 <p>{cont1}</p>
                 <p>{cont2}</p>
             </div>
@@ -40,7 +40,7 @@ const ContactItemStyled = styled.div`
         }
     }
     .right-content{
-        h6{
+        h4{
             color: var(--white-color);
             font-size: 1.2rem;
             padding-bottom: .6rem;
@@ -50,7 +50,7 @@ const ContactItemStyled = styled.div`
             a{
                 color: var(--primary-color-light);
                 text-decoration: underline;
-                transition: all 0.3s ease;
+                transition: color 0.3s ease;
                 &:hover{
                     color: var(--white-color);
                 }

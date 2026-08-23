@@ -98,11 +98,11 @@ function Contact() {
           <div className="left-content">
             {renderAlert()}
             <div className="contact-title">
-              <h4>Get In Touch</h4>
+              <h3>Get In Touch</h3>
             </div>
             <form className="form" onSubmit={handleSubmit}>
               <div className="form-field">
-                <label htmlFor="fullname">Enter your name*</label>
+                <label htmlFor="fullName">Enter your name*</label>
                 <InputField value={values.fullName} handleChange={handleChange} name="fullName" type="text" placeholder="Full Name" />
               </div>
               <div className="form-field">
@@ -192,7 +192,7 @@ const ContactPageStyled = styled.section`
       }
     }
     .contact-title {
-      h4 {
+      h3 {
         color: var(--white-color);
         padding: 1rem 0;
         font-size: 1.8rem;
@@ -224,6 +224,11 @@ const ContactPageStyled = styled.section`
           padding: 0 15px;
           width: 100%;
           color: inherit;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+          &:focus-visible {
+            border-color: var(--white-color);
+            box-shadow: 0 0 0 3px rgba(232, 233, 237, 0.15);
+          }
         }
         textarea {
           background-color: transparent;
@@ -232,6 +237,11 @@ const ContactPageStyled = styled.section`
           color: inherit;
           width: 100%;
           padding: 0.8rem 1rem;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+          &:focus-visible {
+            border-color: var(--white-color);
+            box-shadow: 0 0 0 3px rgba(232, 233, 237, 0.15);
+          }
         }
         button{
           outline: none;
@@ -241,7 +251,7 @@ const ContactPageStyled = styled.section`
     font-size: inherit;
     color: var(--white-color);
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
     margin-bottom: .6rem;
     &:active ,&:focus{
         background-color: var(--primary-color);
@@ -266,7 +276,7 @@ const ContactPageStyled = styled.section`
       a {
         color: var(--primary-color-light);
         text-decoration: underline;
-        transition: all 0.3s ease;
+        transition: color 0.3s ease;
         &:hover {
           color: var(--white-color);
         }
@@ -278,7 +288,7 @@ const ContactPageStyled = styled.section`
         font-size: var(--font-size-small);
         padding: 0.15rem 0.6rem;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: border-color 0.3s ease, color 0.3s ease;
         &:hover {
           border-color: var(--primary-color-light);
           color: var(--primary-color-light);

@@ -23,7 +23,7 @@ const ButtonStyled = styled.button`
     font-size: inherit;
     color: var(--white-color);
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
     margin-bottom: .6rem;
     &:active ,&:focus{
         background-color: var(--primary-color);

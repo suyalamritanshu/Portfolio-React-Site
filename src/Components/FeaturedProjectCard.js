@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-function FeaturedProjectCard({ image, title, text, link, stack }) {
+function FeaturedProjectCard({ image, imageWebp, imageWidth, imageHeight, title, text, link, stack }) {
   return (
     <FeaturedProjectCardStyled>
-      <img src={image} alt={`${title} screenshot`} />
+      <picture>
+        {imageWebp && <source srcSet={imageWebp} type="image/webp" />}
+        <img
+          src={image}
+          width={imageWidth}
+          height={imageHeight}
+          alt={`${title} screenshot`}
+          fetchpriority="high"
+        />
+      </picture>
       <div className="content">
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{text}</p>
         {stack && stack.length > 0 && (
           <ul className="stack">
@@ -43,7 +52,7 @@ const FeaturedProjectCardStyled = styled.div`
     padding: 1.5rem;
   }
 
-  h4 {
+  h3 {
     color: var(--white-color);
     font-size: 1.6rem;
     padding-bottom: 0.6rem;

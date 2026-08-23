@@ -36,6 +36,9 @@ function Projects() {
             <FeaturedProjectCard
               key={project.id}
               image={project.image}
+              imageWebp={project.imageWebp}
+              imageWidth={project.imageWidth}
+              imageHeight={project.imageHeight}
               title={project.title}
               text={project.text}
               link={project.link}

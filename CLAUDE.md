@@ -41,7 +41,7 @@ Persistent chrome: `src/Components/Sidebar.js` (fixed left nav, contains `src/Co
 **Content/section components**
 - `Title.js` — big section heading, used at top of About/Projects/Resume/Contact/Skills.
 - `SmallTitle.js` — icon + smaller heading, used inside `Resume.js` for "Working Experience" / "Educational Qualifications" subheadings.
-- `ImageSection.js` — About page bio block: profile photo, name, bio paragraph, "Full Name / Age / Languages / Location" fact table, "View Resume" button linking to an external Google Drive URL (resume PDF is **not** in the repo).
+- `ImageSection.js` — About page bio block: profile photo, name, bio paragraph, "View Resume" button linking to an external Google Drive direct-download URL (`ImageSection.js:16`), `target="_blank" rel="noreferrer"` (resume PDF is **not** in the repo). Same URL is also used by the hero's "Download Resume" link in `Home.js:36`.
 - `Skills.js` — renders a hardcoded, arbitrary-percentage skill bar list (see Content data flow — this data lives inline in the component, not in `Data/`).
 - `ProgressBar.js` — single skill bar (title + % width + % label), used by `Skills.js`.
 - `Resume.js` — work experience + education timeline, calls `ResumeItem.js` per entry. **Content is hardcoded directly in this component** (not in `Data/`).
@@ -97,7 +97,7 @@ All under `src/img/` (imported as JS modules, bundled by webpack) — **53MB tot
 - `blogs/blog1-5.svg` — only referenced by the dead/unrouted `ActiveProjects.js`.
 - `portImages/*` (3.6MB, 14 files) — used by `Data/portfolios.js` project cards.
 - **Favicon**: `public/favicon.ico` exists and is wired up (`public/index.html:5`).
-- **Resume PDF**: not in the repo at all — linked externally to a Google Drive share URL (`ImageSection.js:33`). Fragile (revocable/movable outside repo control, no versioning with the site).
+- **Resume PDF**: not in the repo at all — linked externally via a Google Drive direct-download URL (`https://drive.google.com/uc?export=download&id=...`, used in both `ImageSection.js:16` and `Home.js:36`), not the `/view` share form, so it downloads immediately rather than opening Drive's preview page. Fragile (revocable/movable outside repo control, no versioning with the site) — sharing settings verified in a fresh, unauthenticated browser context to confirm no sign-in/access-request prompt.
 - **OG image**: none exists, none referenced.
 - **`public/manifest.json`** references `logo192.png` and `logo512.png` (`manifest.json:11,16`) — **neither file exists in `public/`**. Broken manifest icon references (still using the default CRA template values, never customized).
 
@@ -183,7 +183,7 @@ Every factual claim traces to the ground-truth positioning block (Darwinbox role
 1. Any factual claim not in the ground-truth block
 2. Adding, removing, or reordering a page/route
 3. Changing the design direction itself, or breaking a guardrail above
-4. Anything that would regress Lighthouse below the current baseline (92/99 Perf, 89/95 A11y, 100 BP, 100 SEO — mobile/desktop)
+4. Anything that would regress Lighthouse below the current baseline (94+/98+ Perf, 100/100 A11y, 100 BP, 100 SEO — mobile/desktop)
 5. Installing anything third-party
 6. Destructive git operations — history rewrite, force push, branch deletion
 7. Anything needing account or dashboard access the user holds (Netlify, EmailJS, domain)

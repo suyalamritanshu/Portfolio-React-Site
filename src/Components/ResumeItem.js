@@ -9,8 +9,8 @@ function ResumeItem({ year, title, subTitle, text, bullets }) {
                 <p>{year}</p>
             </div>
             <div className="right-content">
-                <h5>{title}</h5>
-                <h6>{subTitle}</h6>
+                <h4>{title}</h4>
+                <h5>{subTitle}</h5>
                 {text && <p>{text}</p>}
                 {bullets && (
                     <ul>
@@ -75,7 +75,7 @@ const ResumeItemStyled = styled.div`
                 display: none;
             }
         }
-        h5{
+        h4{
             color: var(--primary-color-light);
             font-size: var(--font-size-h5);
             margin-top: -0.7rem;
@@ -84,7 +84,7 @@ const ResumeItemStyled = styled.div`
                 margin-top: 0;
             }
         }
-        h6{
+        h5{
             padding-bottom: .6rem;
             font-size: var(--font-size-h6);
         }

@@ -33,14 +33,14 @@ function About() {
               </div>
             </div>
 
-            <h4 className="skills-heading">
+            <h3 className="skills-heading">
               <span className="tick" aria-hidden="true"></span>
               Skills
-            </h4>
+            </h3>
             <div className="skill-groups">
               {skillGroups.map((group) => (
                 <div className="skill-group" key={group.label}>
-                  <h5>{group.label}</h5>
+                  <h4>{group.label}</h4>
                   <div className="pills">
                     {group.items.map((item) => (
                       <span className="pill" key={item}>
@@ -112,7 +112,7 @@ const AboutStyled = styled.section`
     gap: 1.6rem;
   }
   .skill-group {
-    h5 {
+    h4 {
       color: var(--primary-color-light);
       font-size: var(--font-size-small);
       text-transform: uppercase;
