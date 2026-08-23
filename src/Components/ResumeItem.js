@@ -26,10 +26,8 @@ function ResumeItem({ year, title, subTitle, text, bullets }) {
 
 const ResumeItemStyled = styled.div`
     display: flex;
-    @media screen and (max-width: ${breakpoints.px421}){
-        p, h5, h6{
-            font-size: 80%;
-        }
+    @media screen and (max-width: ${breakpoints.px670}){
+        flex-direction: column;
     }
     &:not(:last-child){
         padding-bottom: 3rem;
@@ -39,6 +37,10 @@ const ResumeItemStyled = styled.div`
         flex-shrink: 0;
         padding-left: 20px;
         position: relative;
+        @media screen and (max-width: ${breakpoints.px670}){
+            min-width: 0;
+            margin-bottom: 0.75rem;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -47,7 +49,7 @@ const ResumeItemStyled = styled.div`
             height: 15px;
             width: 15px;
             border-radius: 50%;
-            border: 2px solid var(--border-color);
+            border: 3px solid var(--primary-color-light);
             background-color: var(--background-dark-color);
         }
         p{
@@ -58,6 +60,9 @@ const ResumeItemStyled = styled.div`
     .right-content{
         padding-left: 5rem;
         position: relative;
+        @media screen and (max-width: ${breakpoints.px670}){
+            padding-left: 20px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -66,12 +71,18 @@ const ResumeItemStyled = styled.div`
             height: 2px;
             width: 3rem;
             background-color: var(--border-color);
+            @media screen and (max-width: ${breakpoints.px670}){
+                display: none;
+            }
         }
         h5{
             color: var(--primary-color-light);
             font-size: var(--font-size-h5);
             margin-top: -0.7rem;
             padding-bottom: .4rem;
+            @media screen and (max-width: ${breakpoints.px670}){
+                margin-top: 0;
+            }
         }
         h6{
             padding-bottom: .6rem;
@@ -86,7 +97,7 @@ const ResumeItemStyled = styled.div`
                 color: var(--primary-color-light);
                 text-decoration: underline;
                 font-weight: 500;
-                transition: all 0.3s ease;
+                transition: color 0.3s ease;
                 &:hover{
                     color: var(--white-color);
                 }

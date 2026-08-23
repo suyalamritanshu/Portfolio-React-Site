@@ -83,7 +83,7 @@ const ResumeStyled = styled.section`
     margin-top: 4rem;
   }
   .resume-content {
-    border-left: 2px solid var(--border-color);
+    border-left: 2px solid var(--primary-color-light);
   }
 `;
 export default Resume;

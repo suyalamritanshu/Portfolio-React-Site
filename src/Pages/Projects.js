@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import Title from "../Components/Title";
 import { featuredProjects, earlierProjects } from "../Data/portfolios";
-import Menu from "../Components/Menu";
 import Button from "../Components/Button";
 import FeaturedProjectCard from "../Components/FeaturedProjectCard";
 import SEO from "../Components/SEO";
@@ -12,16 +11,15 @@ import breakpoints from "../styles/breakpoints";
 const allButtons = ["All", ...new Set(earlierProjects.map((item) => item.category))];
 
 function Projects() {
-  const [menuItem, setMenuItems] = useState(earlierProjects);
+  const [visibleProjects, setVisibleProjects] = useState(earlierProjects);
 
   const filter = (button) => {
     if (button === "All") {
-      setMenuItems(earlierProjects);
+      setVisibleProjects(earlierProjects);
       return;
     }
 
-    const filteredData = earlierProjects.filter((item) => item.category === button);
-    setMenuItems(filteredData);
+    setVisibleProjects(earlierProjects.filter((item) => item.category === button));
   };
 
   return (
@@ -49,7 +47,17 @@ function Projects() {
         <EarlierWorkStyled>
           <summary>Earlier work</summary>
           <Button filter={filter} button={allButtons} />
-          <Menu menuItem={menuItem} />
+          <ul className="earlier-list">
+            {visibleProjects.map((project) => (
+              <li key={project.id}>
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  <span className="title">{project.title}</span>
+                  <span className="text">{project.text}</span>
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </EarlierWorkStyled>
       </InnerLayout>
     </MainLayout>
@@ -99,6 +107,60 @@ const EarlierWorkStyled = styled.details`
   }
   &[open] summary::after {
     transform: rotate(-135deg);
+  }
+
+  .earlier-list {
+    margin-top: 1rem;
+    li {
+      border-top: 1px solid var(--border-color);
+      &:last-child {
+        border-bottom: 1px solid var(--border-color);
+      }
+    }
+    a {
+      display: flex;
+      align-items: baseline;
+      gap: 1.25rem;
+      padding: 1rem 0.25rem;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: var(--background-dark-grey);
+        .arrow {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+    .title {
+      color: var(--white-color);
+      font-weight: 600;
+      flex-shrink: 0;
+      width: 11rem;
+    }
+    .text {
+      color: var(--font-light-color);
+      font-size: var(--font-size-small);
+      flex: 1;
+    }
+    .arrow {
+      color: var(--primary-color-light);
+      opacity: 0;
+      transform: translateX(-0.5rem);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    @media screen and (max-width: ${breakpoints.px670}) {
+      a {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .title {
+        width: auto;
+      }
+      .arrow {
+        display: none;
+      }
+    }
   }
 `;
 
