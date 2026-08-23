@@ -41,6 +41,7 @@ function Projects() {
               title={project.title}
               text={project.text}
               link={project.link}
+              stack={project.stack}
             />
           ))}
         </FeaturedGridStyled>
@@ -68,11 +69,36 @@ const EarlierWorkStyled = styled.details`
   margin-top: 4rem;
   summary {
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--font-light-color);
     font-size: var(--font-size-h6);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 1.5rem;
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      border-right: 2px solid var(--font-light-color);
+      border-bottom: 2px solid var(--font-light-color);
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+    &:hover {
+      color: var(--white-color);
+      &::after {
+        border-color: var(--white-color);
+      }
+    }
+  }
+  &[open] summary::after {
+    transform: rotate(-135deg);
   }
 `;
 

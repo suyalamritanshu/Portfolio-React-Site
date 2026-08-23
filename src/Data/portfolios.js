@@ -18,7 +18,8 @@ export const featuredProjects = [
     image: deskdoc,
     link: "https://deskdoc.in",
     title: "DeskDoc",
-    text: "AI voice receptionist for clinics. Vapi for call orchestration, OpenAI for intent handling, 5+ conversation intents, Node.js backend with webhook-driven call flows and real-time slot management — cutting average call handling time by 40%.",
+    text: "AI voice receptionist for clinics — cuts average call handling time by 40%.",
+    stack: ["Vapi", "OpenAI", "Node.js"],
   },
   {
     id: "finovaai",
@@ -26,6 +27,7 @@ export const featuredProjects = [
     link: "https://finova-ai-official.vercel.app",
     title: "FinovaAI",
     text: "Personal finance app.",
+    stack: [],
   },
 ];
 

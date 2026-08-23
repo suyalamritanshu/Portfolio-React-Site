@@ -4,19 +4,20 @@ import breakpoints from './breakpoints';
 
 const GlobalStyle = createGlobalStyle`
 :root{
-    --primary-color: #0062cc;
-    --primary-color-light: #1a8aff;
+    --primary-color: #8F5212;
+    --primary-color-light: #E8A33D;
     --secondary-color: #6c757d;
-    --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
-    --border-color: #2e344e;
+    --background-dark-color: #0B0D12;
+    --background-dark-grey: #14171F;
+    --border-color: #262B38;
     --background-light-color: #F1F1F1;
-    --background-light-color-2: rgba(3,127,255,.3);
-    --white-color: #FFF;
-    --font-light-color: #a4acc4;
+    --background-light-color-2: rgba(255,255,255,.06);
+    --white-color: #E8E9ED;
+    --font-light-color: #9AA1B2;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
-    --sidebar-dark-color: #191D2B;
+    --sidebar-dark-color: #14171F;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
@@ -51,19 +52,20 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
 }
 .dark-theme{
-    --primary-color: #0062cc;
-    --primary-color-light: #1a8aff;
+    --primary-color: #8F5212;
+    --primary-color-light: #E8A33D;
     --secondary-color: #6c757d;
-    --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
-    --border-color: #2e344e;
+    --background-dark-color: #0B0D12;
+    --background-dark-grey: #14171F;
+    --border-color: #262B38;
     --background-light-color: #F1F1F1;
-    --background-light-color-2: rgba(3,127,255,.3);
-    --white-color: #FFF;
-    --font-light-color: #a4acc4;
+    --background-light-color-2: rgba(255,255,255,.06);
+    --white-color: #E8E9ED;
+    --font-light-color: #9AA1B2;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
-    --sidebar-dark-color: #191D2B;
+    --sidebar-dark-color: #14171F;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
@@ -74,14 +76,17 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1.1rem;
     
+}
+html{
+    color-scheme: dark;
 }
 body{
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
-    transition: all .4s ease-in-out;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
 }
 body::-webkit-scrollbar{
     width: 9px;
@@ -107,6 +112,7 @@ a{
 h1{
     font-size: var(--font-size-h1);
     color: var(--white-color);
+    font-weight: 600;
     span{
         font-size: var(--font-size-h1);
         @media screen and (max-width: ${breakpoints.mobileHeading}){
@@ -120,22 +126,27 @@ h1{
 h2{
     font-size: var(--font-size-h2);
     color: var(--white-color);
+    font-weight: 600;
 }
 h3{
     font-size: var(--font-size-h3);
     color: var(--white-color);
+    font-weight: 600;
 }
 h4{
     font-size: var(--font-size-h4);
     color: var(--white-color);
+    font-weight: 600;
 }
 h5{
     font-size: var(--font-size-h5);
     color: var(--white-color);
+    font-weight: 600;
 }
 h6{
     color: var(--white-color);
     font-size: var(--font-size-h6);
+    font-weight: 600;
     padding-bottom: .6rem;
 }
 p{

@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import breakpoints from "../styles/breakpoints";
 import avatar from "../img/avatar.jpeg";
 
 function Navigation() {
   return (
     <NavigationStyled>
-      <div className="avatar">
+      <NavLink to="/" end className="brand" aria-label="Home">
         <img src={avatar} alt="Amritanshu Suyal" width="1600" height="1600" />
-      </div>
+        <span className="brand-name">Amritanshu Suyal</span>
+      </NavLink>
       <ul className="nav-items">
-        <li className="nav-item">
+        <li>
           <NavLink
             to="/"
             end
@@ -19,120 +21,114 @@ function Navigation() {
             Home
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li>
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active-class" : "")}
           >
-            About Me
+            About
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li>
           <NavLink
             to="/resume"
             className={({ isActive }) => (isActive ? "active-class" : "")}
           >
-            My Resume
+            Resume
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li>
           <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? "active-class" : "")}
           >
-            My Projects
+            Projects
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li>
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active-class" : "")}
           >
-            Contact Me
+            Contact
           </NavLink>
         </li>
       </ul>
-      <footer className="footer">
-        <p>
-          {" "}
-          Copyright @{new Date().getFullYear()} <b> Amritanshu Suyal</b>
-        </p>
-      </footer>
     </NavigationStyled>
   );
 }
 
 const NavigationStyled = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5rem;
+  z-index: 20;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   align-items: center;
-  height: 60%;
-  width: 100%;
-  border-right: 1px solid var(--border-color);
-  .avatar {
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-    padding: 1rem 0;
-    cursor: pointer;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: var(--sidebar-dark-color);
+  border-bottom: 1px solid var(--border-color);
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     img {
-      width: 82%;
-      height: auto;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
-      border: 8px solid var(--border-color);
+      object-fit: cover;
+      border: 2px solid var(--border-color);
+    }
+    .brand-name {
+      color: var(--white-color);
+      font-weight: 600;
+      font-size: var(--font-size-body);
+      white-space: nowrap;
     }
   }
+
   .nav-items {
-    width: 100%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    li a {
+      display: block;
+      padding: 0.5rem 0.85rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: var(--font-size-small);
+      letter-spacing: 1px;
+      color: var(--font-light-color);
+      transition: color 0.3s ease, background-color 0.3s ease;
+      &:hover {
+        color: var(--white-color);
+      }
+    }
     .active-class {
       background-color: var(--primary-color);
-      color: white;
-    }
-    li {
-      display: block;
-      a {
-        display: block;
-        padding: 0.45rem 0;
-        position: relative;
-        z-index: 10;
-        text-transform: uppercase;
-        transition: all 0.4s ease-in-out;
-        font-weight: 600;
-        letter-spacing: 1px;
-        &:hover {
-          cursor: pointer;
-          color: var(--white-color);
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 50%;
-          background-color: var(--primary-color);
-          transition: All 0.4s cubic-bezier(1, -0.2, 0.25, 0.95);
-          opacity: 0.21;
-          z-index: -1;
-        }
-      }
-      a:hover::before {
-        width: 100%;
-        height: 100%;
-      }
+      color: var(--white-color) !important;
     }
   }
-  footer {
-    border-top: 1px solid var(--border-color);
-    width: 100%;
-    p {
-      padding: 1.3rem 0;
-      font-size: 1.1rem;
-      display: block;
-      text-align: center;
+
+  @media screen and (max-width: ${breakpoints.px496}) {
+    padding: 0 1rem;
+    .brand-name {
+      display: none;
+    }
+    .nav-items {
+      gap: 0;
+      li a {
+        padding: 0.5rem 0.35rem;
+        font-size: 0.65rem;
+        letter-spacing: 0;
+      }
     }
   }
 `;
+
 export default Navigation;

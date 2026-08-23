@@ -164,9 +164,9 @@ const ContactPageStyled = styled.section`
     border-radius: 4px;
     text-align: center;
     &.form-alert--success {
-      background-color: rgba(3, 127, 255, 0.15);
-      color: var(--primary-color-light);
-      border: 1px solid var(--primary-color);
+      background-color: rgba(76, 175, 125, 0.15);
+      color: #4CAF7D;
+      border: 1px solid #4CAF7D;
     }
     &.form-alert--error {
       background-color: rgba(220, 53, 69, 0.15);
