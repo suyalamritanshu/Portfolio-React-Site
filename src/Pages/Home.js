@@ -154,10 +154,16 @@ const HeroStyled = styled.header`
     font-size: var(--font-size-small);
     font-weight: 500;
     margin-bottom: 1rem;
+    @media screen and (max-width: ${breakpoints.mobileHeading}) {
+      margin-bottom: 0.6rem;
+    }
   }
 
   h1 {
     margin-bottom: 0.5rem;
+    @media screen and (max-width: ${breakpoints.px370}) {
+      font-size: 2.2rem;
+    }
   }
 
   h2 {
@@ -166,6 +172,12 @@ const HeroStyled = styled.header`
     color: var(--white-color);
     font-weight: 500;
     margin-bottom: 1.5rem;
+    @media screen and (max-width: ${breakpoints.mobileHeading}) {
+      margin-bottom: 0.75rem;
+    }
+    @media screen and (max-width: ${breakpoints.px370}) {
+      font-size: 1.5rem;
+    }
   }
 
   .lede {
@@ -173,7 +185,9 @@ const HeroStyled = styled.header`
     line-height: 1.7;
     margin-bottom: 2.5rem;
     @media screen and (max-width: ${breakpoints.mobileHeading}) {
-      margin-bottom: 1.5rem;
+      font-size: var(--font-size-body);
+      line-height: 1.5;
+      margin-bottom: 1rem;
     }
   }
 
@@ -182,6 +196,9 @@ const HeroStyled = styled.header`
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    @media screen and (max-width: ${breakpoints.mobileHeading}) {
+      gap: 0.75rem;
+    }
   }
 
   .resume-link {
