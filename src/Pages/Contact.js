@@ -111,7 +111,7 @@ function Contact() {
               </div>
               <div className="form-field">
                 <label htmlFor="subject">Enter your subject</label>
-                <InputField value={values.subject} handleChange={handleChange} name="subject" type="text" placeholder="Subject" />
+                <InputField value={values.subject} handleChange={handleChange} name="subject" type="text" placeholder="Subject" required={false} />
               </div>
               <div className="form-field">
                 <label htmlFor="message">Enter your Message*</label>
