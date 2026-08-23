@@ -160,46 +160,6 @@ span{
 .u-margin-bottom{
     margin-bottom: 4rem;
 }
-//Floting Toggler
-.light-dark-mode{
-    position: fixed;
-    right: 0;
-    top: 50%;
-    background-color: var(--background-light-color-2);
-    width: 6.5rem;
-    height: 2.5rem;
-    z-index: 15;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    svg{
-      display: flex;
-      align-items: center;
-      font-size: 1.7rem;
-      color: var(--white-color);
-    }
-  }
-  //Nav Toggler
-  .ham-burger-menu{
-      position: absolute;
-      right: 5%;
-      top: 3%; 
-      display: none;
-      z-index: 15;
-      svg{
-          font-size: 3rem;
-      }
-    }
-    .nav-toggle{
-        transform: translateX(0);
-        z-index: 20;
-    }
-  @media screen and (max-width: ${breakpoints.sidebar}){
-    .ham-burger-menu{
-        display: block;
-    }
-  }
-//Global Media Queries
 `;
 
 export default GlobalStyle;

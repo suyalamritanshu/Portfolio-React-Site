@@ -97,6 +97,9 @@ const EarlierWorkStyled = styled.details`
       border-bottom: 2px solid var(--font-light-color);
       transform: rotate(45deg);
       transition: transform 0.3s ease;
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
     }
     &:hover {
       color: var(--white-color);
@@ -148,6 +151,10 @@ const EarlierWorkStyled = styled.details`
       transform: translateX(-0.5rem);
       transition: opacity 0.2s ease, transform 0.2s ease;
       flex-shrink: 0;
+      @media (prefers-reduced-motion: reduce) {
+        transform: none;
+        transition: opacity 0.2s ease;
+      }
     }
     @media screen and (max-width: ${breakpoints.px670}) {
       a {

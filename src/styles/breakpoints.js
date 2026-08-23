@@ -3,7 +3,6 @@
 // overclaim a relationship between them that doesn't exist. Values are
 // preserved exactly as they were before centralizing here.
 const breakpoints = {
-  sidebar: "1200px",
   mobileHeading: "502px",
   px370: "370px",
   px421: "421px",
