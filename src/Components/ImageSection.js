@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
-import resume from '../img/avatar.jpeg';
+import avatarWebp from '../img/avatar.webp';
+import avatarJpg from '../img/avatar.jpg';
 import PrimaryButton from './PrimaryButton';
 
 function ImageSection() {
     return (
         <ImageSectionStyled>
-            <img src={resume} alt="Amritanshu Suyal" width="1600" height="1600" />
+            <picture>
+                <source srcSet={avatarWebp} type="image/webp" />
+                <img src={avatarJpg} width="800" height="800" alt="Amritanshu Suyal" />
+            </picture>
             <h3>I am <span>Amritanshu</span></h3>
             <p className="paragraph">
                 I build the infrastructure that lets AI agents actually work inside enterprise software. At Darwinbox, an HRMS serving 4M+ enterprise users, I work on the agent platform — the layer between LLMs and real business systems.

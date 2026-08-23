@@ -2,13 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import breakpoints from "../styles/breakpoints";
-import avatar from "../img/avatar.jpeg";
+import avatarWebp from "../img/avatar.webp";
+import avatarJpg from "../img/avatar.jpg";
 
 function Navigation() {
   return (
     <NavigationStyled>
       <NavLink to="/" end className="brand" aria-label="Home">
-        <img src={avatar} alt="Amritanshu Suyal" width="1600" height="1600" />
+        <picture>
+          <source srcSet={avatarWebp} type="image/webp" />
+          <img src={avatarJpg} width="800" height="800" alt="Amritanshu Suyal" />
+        </picture>
         <span className="brand-name">Amritanshu Suyal</span>
       </NavLink>
       <ul className="nav-items">
