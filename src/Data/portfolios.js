@@ -1,6 +1,5 @@
-import css1 from "../img/portImages/cv_css.png";
-import react1 from "../img/portImages/react_styled.png";
-import img3 from "../img/portImages/maya-3.jpg";
+import deskdoc from "../img/portImages/deskdoc.png";
+import finovaai from "../img/portImages/finovaai.png";
 import aj1 from "../img/portImages/aj1.jpeg";
 import nh1 from "../img/portImages/nh1.jpeg";
 import vw from "../img/portImages/vw.jpeg";
@@ -13,7 +12,24 @@ import ja from "../img/portImages/ja.jpeg";
 import qr from "../img/portImages/qr.jpeg";
 import da from "../img/portImages/da.jpeg";
 
-const portfolios = [
+export const featuredProjects = [
+  {
+    id: "deskdoc",
+    image: deskdoc,
+    link: "https://deskdoc.in",
+    title: "DeskDoc",
+    text: "AI voice receptionist for clinics. Vapi for call orchestration, OpenAI for intent handling, 5+ conversation intents, Node.js backend with webhook-driven call flows and real-time slot management — cutting average call handling time by 40%.",
+  },
+  {
+    id: "finovaai",
+    image: finovaai,
+    link: "https://finova-ai-official.vercel.app",
+    title: "FinovaAI",
+    text: "Personal finance app.",
+  },
+];
+
+export const earlierProjects = [
   {
     id: 1,
     category: "Android (Java)",
@@ -116,5 +132,3 @@ const portfolios = [
     text: "This app can find meaning of any english word with sound functionality and different parts of speech using a dictionary api.",
   },
 ];
-
-export default portfolios;

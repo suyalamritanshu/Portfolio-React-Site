@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
+import breakpoints from '../styles/breakpoints';
 
-function ResumeItem({ year, title, subTitle, text }) {
+function ResumeItem({ year, title, subTitle, text, bullets }) {
     return (
         <ResumeItemStyled>
             <div className="left-content">
@@ -10,7 +11,14 @@ function ResumeItem({ year, title, subTitle, text }) {
             <div className="right-content">
                 <h5>{title}</h5>
                 <h6>{subTitle}</h6>
-                <p>{text}</p>
+                {text && <p>{text}</p>}
+                {bullets && (
+                    <ul>
+                        {bullets.map((bullet, i) => (
+                            <li key={i}>{bullet}</li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </ResumeItemStyled>
     )
@@ -18,7 +26,7 @@ function ResumeItem({ year, title, subTitle, text }) {
 
 const ResumeItemStyled = styled.div`
     display: flex;
-    @media screen and (max-width: 421px){
+    @media screen and (max-width: ${breakpoints.px421}){
         p, h5, h6{
             font-size: 80%;
         }
@@ -60,7 +68,7 @@ const ResumeItemStyled = styled.div`
             background-color: var(--border-color);
         }
         h5{
-            color: var(--primary-color);
+            color: var(--primary-color-light);
             font-size: var(--font-size-h5);
             margin-top: -0.7rem;
             padding-bottom: .4rem;
@@ -75,12 +83,35 @@ const ResumeItemStyled = styled.div`
             opacity: 0.85;
             margin-top: 0.5rem;
             a{
-                color: var(--primary-color);
+                color: var(--primary-color-light);
                 text-decoration: underline;
                 font-weight: 500;
                 transition: all 0.3s ease;
                 &:hover{
-                    color: var(--primary-color-light);
+                    color: var(--white-color);
+                }
+            }
+        }
+        ul{
+            margin-top: 0.5rem;
+            li{
+                position: relative;
+                font-size: var(--font-size-body);
+                line-height: 1.6;
+                opacity: 0.85;
+                padding-left: 1.1rem;
+                &:not(:last-child){
+                    margin-bottom: 0.6rem;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0.6rem;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: var(--primary-color);
                 }
             }
         }

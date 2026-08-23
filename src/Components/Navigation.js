@@ -7,31 +7,47 @@ function Navigation() {
   return (
     <NavigationStyled>
       <div className="avatar">
-        <img src={avatar} alt="photo" />
+        <img src={avatar} alt="Amritanshu Suyal" width="1600" height="1600" />
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <NavLink to="/" activeClassName="active-class" exact>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "active-class" : "")}
+          >
             Home
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/about" activeClassName="active-class" exact>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active-class" : "")}
+          >
             About Me
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/resume" activeClassName="active-class" exact>
+          <NavLink
+            to="/resume"
+            className={({ isActive }) => (isActive ? "active-class" : "")}
+          >
             My Resume
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/projects" activeClassName="active-class" exact>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "active-class" : "")}
+          >
             My Projects
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact" activeClassName="active-class" exact>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active-class" : "")}
+          >
             Contact Me
           </NavLink>
         </li>
@@ -62,6 +78,7 @@ const NavigationStyled = styled.nav`
     cursor: pointer;
     img {
       width: 82%;
+      height: auto;
       border-radius: 50%;
       border: 8px solid var(--border-color);
     }
@@ -70,7 +87,7 @@ const NavigationStyled = styled.nav`
     width: 100%;
     text-align: center;
     .active-class {
-      background-color: var(--primary-color-light);
+      background-color: var(--primary-color);
       color: white;
     }
     li {

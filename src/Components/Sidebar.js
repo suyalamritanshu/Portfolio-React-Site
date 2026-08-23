@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Navigation from './Navigation';
+import breakpoints from '../styles/breakpoints';
 
 
 function Sidebar({navToggle}) {
@@ -18,7 +19,7 @@ const SidebarStyled = styled.div`
     background-color: var(--sidebar-dark-color);
     overflow: hidden;
     transition: all .4s ease-in-out;
-    @media screen and (max-width:1200px){
+    @media screen and (max-width: ${breakpoints.sidebar}){
         transform: translateX(-100%);
         z-index: 20;
     }

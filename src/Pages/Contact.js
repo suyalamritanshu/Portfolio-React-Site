@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import Title from "../Components/Title";
-import PrimaryButton from "../Components/PrimaryButton";
-import PhoneIcon from "@material-ui/icons/Phone";
-import EmailIcon from "@material-ui/icons/Email";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ContactItem from "../Components/ContactItem";
 import InputField from '../Components/InputField';
 import TextareaField from '../Components/TextareaField';
-import emailjs from '@emailjs/browser';
+import SEO from '../Components/SEO';
+import breakpoints from '../styles/breakpoints';
+
+const CONTACT_EMAIL = 'amritanshu.suyall2@gmail.com';
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function Contact() {
-  const phone = <PhoneIcon />;
   const email = <EmailIcon />;
+  const linkedin = <LinkedInIcon />;
   const location = <LocationOnIcon />;
   const [values, setValues] = useState({
     fullName: '',
@@ -22,28 +25,36 @@ function Contact() {
     message: '',
   });
   const [status, setStatus] = useState('');
+  const [copied, setCopied] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send('service_yvpj3t3', 'template_cq8jpwc', values, 'user_fZPLFYJdxP6PsGNc3haqa')
-      .then(response => {
-        console.log('SUCCESS!', response);
-        setValues({
-          fullName: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-        setStatus('SUCCESS');
-      }, error => {
-        console.log('FAILED...', error);
-      });
+
+    const trimmedName = values.fullName.trim();
+    const trimmedEmail = values.email.trim();
+    const trimmedMessage = values.message.trim();
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage || !EMAIL_REGEX.test(trimmedEmail)) {
+      setStatus('INVALID');
+      return;
+    }
+
+    const subjectLine = values.subject.trim()
+      ? `Portfolio enquiry — ${values.subject.trim()}`
+      : 'Portfolio enquiry';
+    const body = `From: ${trimmedName} (${trimmedEmail})\n\n${trimmedMessage}`;
+
+    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
+    setStatus('OPENING');
   }
 
   useEffect(() => {
-    if (status === 'SUCCESS') {
+    if (status === 'OPENING' || status === 'INVALID') {
       setTimeout(() => {
         setStatus('');
-      }, 100000);
+      }, 10000);
     }
   }, [status]);
 
@@ -54,19 +65,38 @@ function Contact() {
     }))
   }
 
-  const renderAlert = () => (
-    <div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center">
-      <p>I'll get back to you</p>
-    </div>
-  )
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      // Clipboard API unavailable/denied — the mailto link above still works.
+    }
+  }
+
+  const renderAlert = () => {
+    if (status === 'OPENING') {
+      return <div className="form-alert form-alert--success">Opening your email client with a prefilled draft. If nothing happens, use the direct link below.</div>;
+    }
+    if (status === 'INVALID') {
+      return <div className="form-alert form-alert--error">Please fill in your name, a valid email, and a message before composing.</div>;
+    }
+    return null;
+  }
 
   return (
     <MainLayout>
+      <SEO
+        title="Contact | Amritanshu Suyal"
+        description="Get in touch with Amritanshu Suyal via email or LinkedIn."
+        path="/contact"
+      />
       <Title title={"Contact"} span={"Contact"} />
       <ContactPageStyled>
         <InnerLayout className={"contact-section"}>
           <div className="left-content">
-            {status && renderAlert()}
+            {renderAlert()}
             <div className="contact-title">
               <h4>Get In Touch</h4>
             </div>
@@ -88,30 +118,37 @@ function Contact() {
                 <TextareaField value={values.message} handleChange={handleChange} name="message" />
               </div>
               <div className="form-field">
-                <button type="submit">Send Email</button>
+                <button type="submit">Compose Email</button>
               </div>
 
             </form>
+            <p className="fallback-note">
+              or email me directly at{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              <button type="button" className="copy-btn" onClick={handleCopyEmail}>
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+            </p>
           </div>
           <div className="right-content">
             <ContactItem
-              title={"Phone"}
-              icon={phone}
-              cont1={"+91 9799097816"}
-            />
-            <ContactItem
               title={"Email"}
               icon={email}
-              cont1={"amritanshu.suyall2@gmail.com"}
-              cont2={"suyalamritanshu@gmail.com"}
+              cont1={<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>}
             />
             <ContactItem
-              title={"Address"}
-              icon={location}
+              title={"LinkedIn"}
+              icon={linkedin}
               cont1={
-                "Ayyappa Society, Madhapur, Hyderabad, Telangana"
+                <a href="https://www.linkedin.com/in/amritanshu-suyal-04/" target="_blank" rel="noreferrer">
+                  linkedin.com/in/amritanshu-suyal-04
+                </a>
               }
-              cont2={"India"}
+            />
+            <ContactItem
+              title={"Location"}
+              icon={location}
+              cont1={"Hyderabad, India"}
             />
           </div>
         </InnerLayout>
@@ -121,11 +158,27 @@ function Contact() {
 }
 
 const ContactPageStyled = styled.section`
+  .form-alert {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    &.form-alert--success {
+      background-color: rgba(3, 127, 255, 0.15);
+      color: var(--primary-color-light);
+      border: 1px solid var(--primary-color);
+    }
+    &.form-alert--error {
+      background-color: rgba(220, 53, 69, 0.15);
+      color: #f47c88;
+      border: 1px solid #dc3545;
+    }
+  }
   .contact-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
-    @media screen and (max-width: 978px) {
+    @media screen and (max-width: ${breakpoints.px978}) {
       grid-template-columns: repeat(1, 1fr);
       .f-button {
         margin-bottom: 3rem;
@@ -134,7 +187,7 @@ const ContactPageStyled = styled.section`
     .right-content {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      @media screen and (max-width: 502px) {
+      @media screen and (max-width: ${breakpoints.mobileHeading}) {
         width: 70%;
       }
     }
@@ -147,7 +200,7 @@ const ContactPageStyled = styled.section`
     }
     .form {
       width: 100%;
-      @media screen and (max-width: 502px) {
+      @media screen and (max-width: ${breakpoints.mobileHeading}) {
         width: 100%;
       }
       .form-field {
@@ -199,6 +252,36 @@ const ContactPageStyled = styled.section`
     &:not(:last-child){
         margin-right: .6rem;
     }
+        }
+      }
+    }
+    .fallback-note {
+      margin-top: 1rem;
+      font-size: var(--font-size-small);
+      opacity: 0.75;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      a {
+        color: var(--primary-color-light);
+        text-decoration: underline;
+        transition: all 0.3s ease;
+        &:hover {
+          color: var(--white-color);
+        }
+      }
+      .copy-btn {
+        border: 1px solid var(--border-color);
+        background: transparent;
+        color: var(--font-light-color);
+        font-size: var(--font-size-small);
+        padding: 0.15rem 0.6rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          border-color: var(--primary-color-light);
+          color: var(--primary-color-light);
         }
       }
     }

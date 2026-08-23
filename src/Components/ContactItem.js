@@ -47,6 +47,14 @@ const ContactItemStyled = styled.div`
         }
         p{
             padding: .1rem 0;
+            a{
+                color: var(--primary-color-light);
+                text-decoration: underline;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: var(--white-color);
+                }
+            }
         }
     }
 `;

@@ -2,26 +2,89 @@ import React from "react";
 import styled from "styled-components";
 import { InnerLayout } from "../styles/Layouts";
 import Title from "../Components/Title";
-import ProgressBar from "./ProgressBar";
+
+const skillGroups = [
+  {
+    label: "AI & Agentic",
+    items: [
+      "MCP",
+      "A2UI",
+      "LangChain",
+      "RAG pipelines",
+      "Agent orchestration & evaluation",
+      "Context engineering",
+      "OpenAI/Claude/Gemini APIs",
+    ],
+  },
+  {
+    label: "Languages",
+    items: ["Python", "TypeScript/JavaScript", "SQL", "HTML5", "CSS3"],
+  },
+  {
+    label: "Frontend",
+    items: [
+      "Angular",
+      "React",
+      "Next.js",
+      "Stencil (Web Components)",
+      "RxJS",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    label: "Backend & Data",
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST API design",
+      "OAuth2/JWT",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+    ],
+  },
+  {
+    label: "Cloud & DevOps",
+    items: [
+      "AWS (EC2, S3)",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git",
+      "Observability",
+    ],
+  },
+  {
+    label: "Core CS",
+    items: [
+      "DSA",
+      "System design",
+      "OOP",
+      "Unit & integration testing (Jest, Playwright)",
+      "Agile/Scrum",
+    ],
+  },
+];
 
 function Skills() {
   return (
     <SkillsStyled>
       <Title title={"My Skills"} span={"my skills"} />
       <InnerLayout>
-        <div className="skills">
-          <ProgressBar title={"Next Js"} width={"85%"} text={"85%"} />
-          <ProgressBar title={"Angular"} width={"95%"} text={"95%"} />
-          <ProgressBar title={"Node Js"} width={"90%"} text={"90%"} />
-          <ProgressBar title={"Javascript"} width={"85%"} text={"85%"} />
-          <ProgressBar title={"Java"} width={"90%"} text={"90%"} />
-          {/* <ProgressBar title={"Python"} width={"75%"} text={"75%"} /> */}
-          <ProgressBar title={"Bootstrap"} width={"85%"} text={"85%"} />
-          <ProgressBar title={"Tailwind"} width={"85%"} text={"85%"} />
-          {/* <ProgressBar title={"C++"} width={"85%"} text={"85%"} /> */}
-          <ProgressBar title={"Mongo Db"} width={"85%"} text={"85%"} />
-          <ProgressBar title={"Firebase"} width={"95%"} text={"95%"} />
-          <ProgressBar title={"Kotlin"} width={"55%"} text={"55%"} />
+        <div className="skill-groups">
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.label}>
+              <h5>{group.label}</h5>
+              <div className="pills">
+                {group.items.map((item) => (
+                  <span className="pill" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </InnerLayout>
     </SkillsStyled>
@@ -29,14 +92,32 @@ function Skills() {
 }
 
 const SkillsStyled = styled.section`
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 2rem;
-    grid-column-gap: 3rem;
-    @media screen and (max-width: 700px) {
-      grid-template-columns: repeat(1, 1fr);
+  .skill-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+  .skill-group {
+    h5 {
+      color: var(--primary-color-light);
+      font-size: var(--font-size-h6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.9rem;
     }
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .pill {
+    background-color: var(--background-dark-grey);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: var(--font-size-small);
+    color: var(--font-light-color);
   }
 `;
 

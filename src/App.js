@@ -6,13 +6,12 @@ import ResumePage from "./Pages/ResumePage";
 import Projects from "./Pages/Projects";
 
 import Contact from "./Pages/Contact";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import MenuIcon from "@material-ui/icons/Menu";
-import Switch from "@material-ui/core/Switch";
-import { IconButton } from "@material-ui/core";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from "@mui/material/IconButton";
 import Sidebar from "./Components/Sidebar";
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
+import breakpoints from "./styles/breakpoints";
 
 const App = () => {
   // const [loading, setLoading] = useState(false);
@@ -82,7 +81,11 @@ const App = () => {
       </div> */}
 
       <div className="ham-burger-menu">
-        <IconButton onClick={() => setNavToggle(!navToggle)}>
+        <IconButton
+          onClick={() => setNavToggle(!navToggle)}
+          aria-label={navToggle ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={navToggle}
+        >
           <MenuIcon />
         </IconButton>
       </div>
@@ -105,7 +108,7 @@ const MainContentStyled = styled.main`
   position: relative;
   margin-left: 16.3rem;
   min-height: 100vh;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${breakpoints.sidebar}) {
     margin-left: 0;
   }
   .lines {

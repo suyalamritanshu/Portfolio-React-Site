@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import breakpoints from '../styles/breakpoints';
 
 function Title({title, span}) {
     return (
@@ -18,10 +19,10 @@ const TitleStyled = styled.div`
         text-transform: uppercase;
         position: relative;
         padding-bottom: .7rem;
-        @media screen and (max-width: 496px){
+        @media screen and (max-width: ${breakpoints.px496}){
             font-size: 2.8rem;
         }
-        @media screen and (max-width: 370px){
+        @media screen and (max-width: ${breakpoints.px370}){
             font-size: 2rem;
         }
         &::before{
@@ -52,13 +53,13 @@ const TitleStyled = styled.div`
             left: 0;
             top: 30%;
             z-index: -1;
-            @media screen and (max-width: 620px){
+            @media screen and (max-width: ${breakpoints.px620}){
                 font-size: 4rem;
             }
-            @media screen and (max-width: 496px){
+            @media screen and (max-width: ${breakpoints.px496}){
                 font-size: 3rem;
             }
-            @media screen and (max-width: 370px){
+            @media screen and (max-width: ${breakpoints.px370}){
                 font-size: 2rem;
             }
         }

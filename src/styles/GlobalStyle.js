@@ -1,10 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import breakpoints from './breakpoints';
 
 
 const GlobalStyle = createGlobalStyle`
 :root{
-    --primary-color: #007bff;
-    --primary-color-light: #057FFF;
+    --primary-color: #0062cc;
+    --primary-color-light: #1a8aff;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
     --background-dark-grey: #191D2B;
@@ -31,8 +32,8 @@ const GlobalStyle = createGlobalStyle`
     --font-size-small: 0.875rem;
 }
 .light-theme{
-    --primary-color: #007bff;
-    --primary-color-light: #057FFF;
+    --primary-color: #0062cc;
+    --primary-color-light: #1a8aff;
     --secondary-color: #ff7675;
     --background-dark-color: #F1F1F1;
     --background-dark-grey: #e4e4e4;
@@ -50,8 +51,8 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
 }
 .dark-theme{
-    --primary-color: #007bff;
-    --primary-color-light: #057FFF;
+    --primary-color: #0062cc;
+    --primary-color-light: #1a8aff;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
     --background-dark-grey: #191D2B;
@@ -108,11 +109,11 @@ h1{
     color: var(--white-color);
     span{
         font-size: var(--font-size-h1);
-        @media screen and (max-width: 502px){
+        @media screen and (max-width: ${breakpoints.mobileHeading}){
             font-size: 3rem
         }
     }
-    @media screen and (max-width: 502px){
+    @media screen and (max-width: ${breakpoints.mobileHeading}){
         font-size: 3rem
     }
 }
@@ -182,7 +183,7 @@ span{
         transform: translateX(0);
         z-index: 20;
     }
-  @media screen and (max-width:1200px){
+  @media screen and (max-width: ${breakpoints.sidebar}){
     .ham-burger-menu{
         display: block;
     }

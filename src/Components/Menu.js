@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import GitHub from '@material-ui/icons/GitHub';
-import Pinterest from '@material-ui/icons/Pinterest';
+import GitHub from '@mui/icons-material/GitHub';
 import PreviewIcon from '@mui/icons-material/Preview';
+import breakpoints from '../styles/breakpoints';
 
 function Menu({menuItem}) {
     return (
@@ -12,15 +12,15 @@ function Menu({menuItem}) {
                     return <div className="grid-item" key={item.id}>
                         <div className="portfolio-content">
                             <div className="portfolio-image">
-                                <img src={item.image} alt=""/>
+                                <img src={item.image} alt={`${item.title} screenshot`}/>
                                 <ul>
                                     <li>
-                                        <a href={item.link1} target="_blank">
+                                        <a href={item.link1} target="_blank" rel="noreferrer">
                                             <GitHub />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={item.link2} target="_blank">
+                                        <a href={item.link2} target="_blank" rel="noreferrer">
                                             <PreviewIcon />
                                         </a>
                                     </li>
@@ -40,10 +40,10 @@ const MenuItemStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-    @media screen and (max-width:920px){
+    @media screen and (max-width: ${breakpoints.px920}){
         grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (max-width:670px){
+    @media screen and (max-width: ${breakpoints.px670}){
         grid-template-columns: repeat(1, 1fr);
     }
     .grid-item{

@@ -2,35 +2,32 @@ import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/avatar.jpeg';
 import PrimaryButton from './PrimaryButton';
+import breakpoints from '../styles/breakpoints';
 
 function ImageSection() {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={resume} alt="" />
+                <img src={resume} alt="Amritanshu Suyal" width="1600" height="1600" />
             </div>
             <div className="right-content">
                 <h4>I am <span>Amritanshu</span></h4>
                 <p className="paragraph">
-                    Frontend Engineer specializing in Angular, React, and Next.js. Currently at Darwinbox, building enterprise products for 30+ lakh users with a focus on performance, scalability, and design systems.
+                    I build the infrastructure that lets AI agents actually work inside enterprise software. At Darwinbox, an HRMS serving 4M+ enterprise users, I work on the agent platform — the layer between LLMs and real business systems.
                     <br /><br />
-                    Passionate about creating high-quality user experiences and solving complex UI challenges.
+                    Most of the hard problems here aren't prompting. They're cost, correctness, and trust.
                 </p>
                 <div className="about-info">
                     <div className="info-title">
-                        <p>Full Name</p>
-                        <p>Age</p>
-                        <p>Languages </p>
+                        <p>Role</p>
                         <p>Location</p>
                     </div>
                     <div className="info">
-                        <p>: Amritanshu Suyal</p>
-                        <p>: 23</p>
-                        <p>: English, Hindi </p>
-                        <p>: Hyderabad, Telangana   </p>
+                        <p>: SDE-II, Darwinbox</p>
+                        <p>: Hyderabad, India</p>
                     </div>
                 </div>
-                <a href="https://drive.google.com/file/d/1CA1LWdEvKtaFscXnZELJhBtAHpHuNxD_/view?usp=drive_link" target="_blank">  <PrimaryButton title={'View Resume'} /> </a>
+                <a href="/Amritanshu_Suyal_Resume.pdf" download>  <PrimaryButton title={'View Resume'} /> </a>
 
             </div>
         </ImageSectionStyled>
@@ -42,7 +39,7 @@ const ImageSectionStyled = styled.div`
     margin-top: 5rem;
     display: flex;
     
-    @media screen and (max-width:1000px){
+    @media screen and (max-width: ${breakpoints.px1000}){
         flex-direction: column;
         .left-content{
             margin-bottom: 2rem;
@@ -56,6 +53,7 @@ const ImageSectionStyled = styled.div`
         
         img{
             width: 95%;
+            height: auto;
             object-fit: cover;
         }
     }
